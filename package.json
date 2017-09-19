@@ -1,0 +1,22 @@
+{
+  "name": "drawing_canvas",
+  "version": "1.0.0",
+  "description": "colloborative drawing canvas example",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "sockets",
+    "node",
+    "p5.js",
+    "express"
+  ],
+  "author": "Abhijith Sreekar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "socket.io": "^2.0.3"
+  }
+}
