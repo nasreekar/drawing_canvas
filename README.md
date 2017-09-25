@@ -13,7 +13,7 @@ I'm using Javascript, Basic HTML files and p5.js as the client side.
 p5.js is a JavaScript library that starts with the original goal of Processing, to make coding accessible for artists, designers, educators, and beginners, and reinterprets this for today's web. For more information and tutorials about p5.js please check the github link [here](https://github.com/processing/p5.js)
 
 ## Media
-I have posted a working video of the app in the [videos]() folder. 
+I have posted a working video of the app in the [videos](https://github.com/nasreekar/drawing_canvas/tree/master/videos) folder. 
 
 ## Future Updates
 Functionalities like selecting the color, brush thickness etc can be implemented for better functionality and user experience.
