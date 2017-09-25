@@ -3,11 +3,18 @@
 var socket;
 
 function setup(){
-	createCanvas(600,400);
-	background(51);
+	//createCanvas(600,400);
+	//background(51);
+
+	var canvasDiv = document.getElementById('main');
+    var width = canvasDiv.offsetWidth;
+    var sketchCanvas = createCanvas(width,600);
+    console.log(sketchCanvas);
+    sketchCanvas.parent("main");
+    background(51);
 
 	//adding socket client so that it interacts with the server
-	socket = io.connect('http://localhost:4200');
+	socket = io.connect('http://localhost:4200'); //window.location.hostname
 	socket.on('mouse',newDrawing); //on receiving
 
 }

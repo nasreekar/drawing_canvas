@@ -1,15 +1,61 @@
 <html>
-  <head>
-  	<meta charset="utf-8">
-     <style> body {padding: 0; margin: 0;} </style>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Drawing Canvas is a  webapp, where we can collaborate with others on the same canvas">
+  <meta name="keywords" content="draw canvas collaborate collaborative color abhijith sreekar">
+  <meta name="author" content="Abhijith Sreekar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  	<script language= "javascript" src="libraries/p5.js" type="text/javascript"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
 
-    <script language= "javascript" src="libraries/p5.dom.js" type="text/javascript"></script>
-    <script language= "javascript" src="libraries/p5.sound.js" type="text/javascript"></script>
-    <script language= "javascript" type="text/javascript" src="sketch.js" ></script>
-     <script src="/socket.io/socket.io.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <title>Collaborative Drawing Canvas</title>
+</head>
+<body>
+  <div id="header"><h3 style="display: inline-block;">Collaborative Drawing Canvas</h3></div>
+  <!-- <div id="sidebar-left">
+    <h3 style="display: inline-block; padding: 5px">What's this?</h3>
+    <p style="display: inline-block; padding: 5px">Collaborative Drawing Canvas is a webapp where you can collaborate with other users and draw/write on the same drawing board</p>
+    <hr>
+    <h4 style="display: inline-block; padding: 5px">Color</h4>
+    <div id="brush-color"><br></div>
+    <div class="sidebarel" id="colors">
+
+    </div>
+    <h4 style="display: inline-block; padding: 5px">Thickness</h4>
+    <div class="siderbarel" id="thickness">
+
+    </div>
+    <hr>
+    
+    <button type="button" class="btn btn-default" onclick="saveCanvas()">Download</button>
+  </div> -->
+
+  <div id="main">
+
+
+    <a href="" class="float" type="button" onClick="saveCanvas()">
+      <i class="fa fa-download my-float"></i>
+    </a>
+  </div>
+
+  <!-- <button class="btn btn-primary" type="button" onclick="saveCanvas()">Download</button> -->
+  <div id="footer">
+    <p style="display: inline-block;">&copy; ASN 2017</p>
+  </div>
+
+  <script>
+    function saveCanvas() {
+      var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        window.location.href = image; // local save
+      }
+    </script>
+
+    
   </body>
-</html>
+  </html>
